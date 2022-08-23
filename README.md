@@ -1,6 +1,11 @@
 Maybe
 =====
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![GitHub go.mod Go version of a Go module](https://img.shields.io/github/go-mod/go-version/mono83/maybe.svg)](https://github.com/mono83/maybe)
+[![GoDoc reference example](https://img.shields.io/badge/godoc-reference-blue.svg)](https://pkg.go.dev/github.com/mono83/maybe)
+[![Go Report Card](https://goreportcard.com/badge/github.com/mono83/maybe)](https://goreportcard.com/report/github.com/mono83/maybe)
+
 Simple zero dependency struct-based generic monad implementation in Go.
 
 ## Installation
@@ -31,7 +36,7 @@ s := maybe.Map(i, strconv.Itoa) // String type
 
 ### JSON
 
-JSON bindings can be accessible in `github.com/mono83/maybe/json` package:
+JSON bindings can be accessed using `github.com/mono83/maybe/json` package:
 
 ```go
 import "github.com/mono83/maybe/json"
