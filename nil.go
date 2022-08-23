@@ -26,7 +26,7 @@ func isNotNil[T any](value T) bool {
 	if k == reflect.Invalid {
 		return false
 	}
-	switch v.Kind() {
+	switch k {
 	case reflect.Slice, reflect.Map:
 		if v.IsNil() || v.Len() == 0 {
 			return false

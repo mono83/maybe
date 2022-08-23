@@ -43,3 +43,20 @@ type Request struct {
 
 ```
 
+### Benchmarks
+
+```
+$ go test -bench=. -benchmem
+goos: linux
+goarch: amd64
+pkg: github.com/mono83/maybe
+cpu: Intel(R) Core(TM) i5-10400F CPU @ 2.90GHz
+BenchmarkNothing-12             1000000000               0.2704 ns/op          0 B/op          0 allocs/op
+BenchmarkJust-12                904382658                1.313 ns/op           0 B/op          0 allocs/op
+BenchmarkPtr-12                 1000000000               1.051 ns/op           0 B/op          0 allocs/op
+BenchmarkPtrNil-12              755984685                1.578 ns/op           0 B/op          0 allocs/op
+BenchmarkNilableInt-12          72761029                16.37 ns/op            8 B/op          0 allocs/op
+BenchmarkNilableNil-12          275986280                4.157 ns/op           0 B/op          0 allocs/op
+PASS
+ok      github.com/mono83/maybe 6.931s
+```
