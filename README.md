@@ -5,6 +5,7 @@ Maybe
 [![GitHub go.mod Go version of a Go module](https://img.shields.io/github/go-mod/go-version/mono83/maybe.svg)](https://github.com/mono83/maybe)
 [![GoDoc reference example](https://img.shields.io/badge/godoc-reference-blue.svg)](https://pkg.go.dev/github.com/mono83/maybe)
 [![Go Report Card](https://goreportcard.com/badge/github.com/mono83/maybe)](https://goreportcard.com/report/github.com/mono83/maybe)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/mono83/maybe/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/mono83/maybe/tree/main)
 
 Simple zero dependency struct-based generic monad implementation in Go.
 
