@@ -39,7 +39,7 @@ func (m Maybe[T]) IfPresent(consume func(T)) Maybe[T] {
 	return m
 }
 
-// IfPresent invokes given consumer callback if value present and plain
+// IfPresentOrElse invokes given consumer callback if value present and plain
 // func if container empty.
 func (m Maybe[T]) IfPresentOrElse(consume func(T), els func()) Maybe[T] {
 	if m.IsPresent() {
