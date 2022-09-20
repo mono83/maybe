@@ -1,9 +1,10 @@
 package maybe
 
 import (
-	"github.com/stretchr/testify/assert"
 	"strconv"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestMap(t *testing.T) {
@@ -38,4 +39,6 @@ func TestMaybe_MapTo(t *testing.T) {
 	assert.Equal(t, float32(8), Just(8).MapToFloat32(func(x int) float32 { return float32(x) }).Value())
 	assert.Equal(t, float64(8), Just(8).MapToFloat64(func(x int) float64 { return float64(x) }).Value())
 	assert.Equal(t, "8", Just(8).MapToString(strconv.Itoa).Value())
+	assert.Equal(t, []byte("foo"), Just("foo").MapToBytes(func(x string) []byte { return []byte(x) }).Value())
+	assert.True(t, Just("foo").MapToBytes(func(x string) []byte { return nil }).IsEmpty())
 }

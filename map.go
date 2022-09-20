@@ -21,6 +21,7 @@ func nMap[T, R any](from Maybe[T], mapper func(T) R) Maybe[R] {
 }
 
 func (m Maybe[T]) MapToAny(mapper func(T) any) Maybe[any]             { return Map(m, mapper) }
+func (m Maybe[T]) MapToBytes(mapper func(T) []byte) Maybe[[]byte]     { return Map(m, mapper) }
 func (m Maybe[T]) MapToString(mapper func(T) string) Maybe[string]    { return nMap(m, mapper) }
 func (m Maybe[T]) MapToInt(mapper func(T) int) Maybe[int]             { return nMap(m, mapper) }
 func (m Maybe[T]) MapToInt16(mapper func(T) int16) Maybe[int16]       { return nMap(m, mapper) }
