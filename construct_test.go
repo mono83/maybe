@@ -1,8 +1,9 @@
 package maybe
 
 import (
-	"github.com/stretchr/testify/assert"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestNothing(t *testing.T) {
@@ -36,7 +37,7 @@ func TestPtr(t *testing.T) {
 	assert.True(t, p.IsEmpty())
 
 	rs := "Hello"
-	p = Ptr[string](&rs)
+	p = Ptr(&rs)
 	assert.False(t, p.IsEmpty())
 	assert.Equal(t, "Hello", p.Value())
 }

@@ -2,9 +2,10 @@ package json
 
 import (
 	"encoding/json"
+	"testing"
+
 	"github.com/mono83/maybe"
 	"github.com/stretchr/testify/assert"
-	"testing"
 )
 
 func TestJsonMarshal(t *testing.T) {
