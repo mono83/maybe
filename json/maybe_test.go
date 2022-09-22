@@ -28,6 +28,7 @@ func TestJsonUnmarshal(t *testing.T) {
 	if err := json.Unmarshal([]byte("\"foo\""), &x); assert.NoError(t, err) && assert.True(t, x.IsPresent()) {
 		assert.Equal(t, "foo", x.Value())
 	}
+	assert.Error(t, json.Unmarshal([]byte("123"), &x))
 }
 
 type someStruct struct {
